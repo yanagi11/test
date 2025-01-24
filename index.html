@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contents{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            background-color: rgb(248, 240, 196);
+            width: 800px;
+            height: 150px;
+            text-align: center;
+            margin: auto;
+        }
+        .text{
+            background-color: rgb(29, 29, 29);
+            color: white;
+            width: 800px;
+            height: 100px;
+            margin: -15px auto;
+        }
+        .box{
+            background-color:blue;
+            width: 105px;
+            height: 105px;
+            margin: 10px auto;
+        }
+        @media(max-width: 767px){
+            .contents{
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        .img{
+            text-align: center;
+            margin: 25px;
+        }
+        input{
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="contents">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div>テキスト１</div>
+        <div>テキスト２</div>
+        <div>テキスト３</div>
+        <div>テキスト４</div>
+    </div>
+    <div class="text">
+        <p>文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー</p>
+    </div>
+    <div class="img">
+     <img src="img/kapi.webp" alt="">  
+    </div>
+    <div class="Form-Item">
+        <p class="Form-Item-Label"><span class="Form-Item-Label-Required">お名前：</span>氏名</p>
+        <input type="text" name="name" class="Form-Item-Input" required>
+    </div>
+    <div class="Form-Item">
+        <p class="Form-Item-Label"><span class="Form-Item-Label-Required Form-Btn-Free"></span>返信を希望する方はチェックしてください：</p>
+        <input type="checkbox" id="HTML" name="interest" value="HTML">
+        <label for="HTML"></label>
+    </div>
+    <div class="Form-Item">
+        <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span>お問い合わせ内容</p>
+        <textarea class="Form-Item-Textarea" name="inquiry" required></textarea>
+    </div>
+    <input type="submit" class="Form-Btn" value="送信する">
+</body>
+</html>
